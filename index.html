@@ -4,10 +4,28 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ribeye+Marrow&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ribeye+Marrow&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<title>Tic-Tac-Toe</title>
     </head>
     <body>
         <div class="container">
+            <div class="left">
+            <div class="scoreboard">
+                <div class="player-score">
+                    <p class="player1-name">Player1</p>
+                    <p class="player1-score">0</p>
+                </div>
+                <div class="player-score">
+                    <p class="player2-name">Player2</p>
+                    <p class="player2-score">0</p>
+                </div>
+            </div>
+            <button class="restart">Restart</button>
+        </div><div class="right hidden">
             <h1 class="title">TIC-TAC-TOE</h1>
+            
             <div class="message">Player 1's Turn</div>
             <div class="board">
             <button class="tile" data-row="0" data-col="0"></button>
@@ -19,9 +37,27 @@
             <button class="tile" data-row="2" data-col="0"></button>
             <button class="tile" data-row="2" data-col="1"></button>
             <button class="tile" data-row="2" data-col="2"></button>
+        </div></div>
+        <div class="form"><h1 class="title">TIC-TAC-TOE</h1>
+         <form action="" >
+            <label for="player1">Player One:</label>
+            <input type="text" id="player1">
+            <label for="player2">Player Two:</label>
+            <input type="text" id="player2">
+            <label for="rounds">Number of Rounds:</label>
+               <fieldset>
+                <input type="radio" id="three" name="rounds" value="3" checked>
+                <label for="three">3 Rounds</label></fieldset>
+               <fieldset> <input type="radio" id="five" name="rounds" value="5">
+                <label for="five">5 Rounds</label></fieldset>
+               <fieldset> <input type="radio" id="seven" name="rounds" value="7" >
+                <label for="seven">7 Rounds</label></fieldset>
+                <fieldset><input type="radio" id="nine" name="rounds" value="9" >
+                <label for="nine">9 Rounds</label></fieldset>
+            <input type="submit" class="info">
+        </form></div>
         </div>
-        <button class="restart">Restart</button>
-        </div>
+       
     </body>
     <script src="index.js"></script>
 </html>
