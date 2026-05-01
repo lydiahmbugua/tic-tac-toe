@@ -94,30 +94,60 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
+.playfair-display> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.orbitron> {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root{
     --purple: #5B1865;
-    --pink:#DB3069;
+    --pink:rgb(219, 48, 105);
+    --pale-pink:rgb(219, 48, 105) ;
     --grey:#D3D5D4;
     --font:'Ribeye Marrow';
+    --score:'Orbitron';
 }
 
 .container{
     height:100vh;
-    display:flex;
-    flex-direction: column;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:100px;
     align-items: center;
-    justify-content: center;
     background-color: var(--pink);
     font-family: var(--font);
+    
+}
+.left,.right{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+.hidden{
+  display:none;
 }
 
-.message,.title{
+.title{
+    color:var(--purple);
+}
+.message{
     color:var(--grey);
 }
 .tile{
     width: 100px;
     height: 100px;
-    border:1px solid var(--grey);
+    border:2px solid var(--purple);
     background-color: var(--pink);
     color: var(--purple);
     font-size: 2rem;
@@ -132,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
     gap:20px;
     padding:20px;
 }
-.restart{
+.restart,.info{
     background-color: var(--purple);
     color:white;
     border:none;
@@ -140,10 +170,73 @@ h1, h2, h3, h4, h5, h6 {
     padding:5px 20px;
     margin-top: 60px;
 }
+.restart{
+  margin-bottom:56px;
+}
 .restart:hover{
     background-color: white;
     color:  var(--purple);
 }
 .tile:hover{
     background-color:  var(--grey);
+}
+form{
+  width:300px;
+  border:2px solid var(--purple);
+  display:flex;
+  flex-direction: column;
+  gap:12px;
+  background-color: var(--grey);
+  color:var(--purple);
+  z-index:2;
+  padding:20px;
+  border-radius: 24px;
+  opacity:80%;
+
+
+}
+input{
+  border-radius: 24px;
+  color:var(--purple);
+  border:2px solid var(--purple);
+  background-color: var(--pink);
+   opacity:70%;
+  padding-left:16px;
+
+}
+input:focus{
+  border:none;
+  opacity:70%;
+  border:2px solid var(--purple);
+}
+.info{
+  cursor:pointer;
+}
+fieldset{
+  display:flex;
+  gap:12px;
+  border:none;
+}
+.scoreboard{
+  border:8px solid var(--purple);
+  background-color: var(--pink);
+  display:flex;
+  gap:50px;
+  color: var(--grey);
+  border-radius: 24px;
+
+}
+.player-score{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:40px;
+  gap:16px;
+  font-size: large;
+  font-family: var(--score);
+
+}
+.score{
+  font-size: xx-large;
 }
